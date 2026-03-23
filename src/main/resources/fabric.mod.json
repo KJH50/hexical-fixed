@@ -2,8 +2,8 @@
 	"schemaVersion": 1,
 	"id": "hexical",
 	"version": "${version}",
-	"name": "Hexical",
-	"description": "A fun addon containing genie lamps, mage blocks, specks, world scrying, and more!",
+	"name": "Hexical (Fixed for Connector)",
+	"description": "【修复版】支持 HexCasting 0.11.3 + Sinytra Connector + Oculus\n\nOriginal: A fun addon containing genie lamps, mage blocks, specks, world scrying, and more!\n\n【已修复的问题】\n- ✅ OpReadMixin @Redirect 注入失败（HexCasting 0.11.3 兼容）\n- ✅ RenderLayer 循环初始化崩溃（Sinytra Connector 兼容）\n- ✅ Oculus Mixin 冲突（RenderType 静态初始化问题）\n\n【安装要求】\n- Minecraft 1.20.1\n- HexCasting 0.11.3\n- Sinytra Connector 1.0.0-beta.48+\n- Forge 47.4.16+\n\n【原始项目】https://github.com/miyucomics/hexical\n【修复版本】https://github.com/KJH50/hexical-fixed",
 	"authors": [
 		"miyucomics"
 	],
