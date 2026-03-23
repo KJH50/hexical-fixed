@@ -15,7 +15,10 @@ public class RenderLayerMixin {
 	@WrapMethod(method = "getBlockLayers")
 	private static List<RenderLayer> alterBlockLayers(Operation<List<RenderLayer>> original) {
 		List<RenderLayer> mutableCopy = new ArrayList<>(original.call());
-		mutableCopy.add(HexicalRenderLayers.INSTANCE.getMageBlockRenderLayer());
+		// 检查渲染层是否已初始化，避免在 RenderType.<clinit> 期间访问未初始化的字段
+		if (HexicalRenderLayers.INSTANCE.isInitialized()) {
+			mutableCopy.add(HexicalRenderLayers.INSTANCE.getMageBlockRenderLayer());
+		}
 		return Collections.unmodifiableList(mutableCopy);
 	}
 }
